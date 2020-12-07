@@ -30,7 +30,7 @@ describe('CreateUser', () => {
       fakeHashProvider,
     );
 
-    const user = await createUser.execute({
+    await createUser.execute({
       name: 'John Doe',
       email: 'john.doe@gmail.com',
       password: '123456',
