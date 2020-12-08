@@ -1,10 +1,12 @@
 # Recuperação de senha
 
+
 **RF(Requisitos Funcionais)**
 
 - O usuário deve poder recuperar sua senha informando o seu email;
 - O usuário deve receber um e-mail com instruções de recuperação de senha;
 - O usuário deve poder resetar sua senha;
+
 
 **RNF(Requisitos Não Funcionais)**
 
@@ -12,12 +14,14 @@
 - Utilizar Amazon SES para envios em produção;
 - O envio de e-mails deve acontecer em segundo plano (background job)
 
+
 **RN(Regra de negócio)**
 
 - O link enviado por email para resetar senha, deve expirar em 2h;
 - O usuário precisa confirmar a nova senha ao resetar sua senha;
 
 # Atualização do perfil
+
 
 **RF(Requisitos Funcionais)**
 
@@ -44,6 +48,7 @@
 
 - Os agendamentos do prestador no dia devem ser armazenados em cache;
 - As notificações do prestador devem ser armazenadas no MongoDB;
+- As notificações do prestador devem ser enviadas em tempo real utilizando Socket.io;
 
 **RN(Regra de negócio)**
 
@@ -59,9 +64,11 @@
 - O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
 - O usuário deve poder realizar um novo agendamento com um prestador;
 
+
 **RNF(Requisitos Não Funcionais)**
 
 - A listagem de prestadores deve ser armazenada em cache;
+
 
 **RN(Regra de negócio)**
 
