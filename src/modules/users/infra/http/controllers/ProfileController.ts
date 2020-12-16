@@ -10,11 +10,18 @@ export default class ProfileController {
 
     const showProfile = container.resolve(ShowProfileService);
 
-    const user = await showProfile.execute({
-      user_id,
-    });
+    const user = await showProfile.execute({ user_id });
 
-    return response.json(user);
+    const userWithoutPassword = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      avatar: user.avatar,
+      created_at: user.created_at,
+      updated_at: user.updated_at,
+    };
+
+    return response.json(userWithoutPassword);
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -35,6 +42,7 @@ export default class ProfileController {
       id: user.id,
       name: user.name,
       email: user.email,
+      avatar: user.avatar,
       created_at: user.created_at,
       updated_at: user.updated_at,
     };
